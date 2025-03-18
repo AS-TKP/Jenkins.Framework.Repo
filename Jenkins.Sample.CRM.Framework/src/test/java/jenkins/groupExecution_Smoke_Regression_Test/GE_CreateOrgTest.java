@@ -38,7 +38,7 @@ public class GE_CreateOrgTest extends BaseClassTest{
 	    //verify header msg
 		String actorgname = op.getOrgHeaderMsg().getText();
 	    System.out.println("Executed CreateOrgTest"); 
-		}
+	}
 	
 	@Test(groups = {"RegressionTest"})
 	public void CreateOrgWithIndustryTest() throws Throwable {
