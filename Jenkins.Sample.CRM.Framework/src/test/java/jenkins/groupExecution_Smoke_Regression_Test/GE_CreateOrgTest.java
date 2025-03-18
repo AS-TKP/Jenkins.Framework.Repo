@@ -15,6 +15,17 @@ public class GE_CreateOrgTest extends BaseClassTest{
 	public void CreateOrgTest() throws Throwable {
 	    String OrgName = elib.getDataFromExcel("Org", 1, 2)+ jlib.getRandomNumber();
 
+	    String URL = System.getProperty("url");
+	    String BROWSER = System.getProperty("browser");
+	    String USERNAME = System.getProperty("username");
+	    String PASSWORD = System.getProperty("password");
+	    
+	    System.out.println(URL);
+	    System.out.println(BROWSER);
+	    System.out.println(USERNAME);
+	    System.out.println(PASSWORD);
+
+
 		 //naviagte to organization page
 	    HomePage hp = new HomePage(driver);
 	    hp.getOrganizationslink().click();
@@ -24,7 +35,9 @@ public class GE_CreateOrgTest extends BaseClassTest{
 	    //enter all details 
 	    CreatingNewOrganizationPage cnop =new CreatingNewOrganizationPage(driver);
 	    cnop.createOrg(OrgName);
-	    System.out.println("Executed CreateOrgTest");
+	    //verify header msg
+		String actorgname = op.getOrgHeaderMsg().getText();
+	    System.out.println("Executed CreateOrgTest"); 
 		}
 	
 	@Test(groups = {"RegressionTest"})

@@ -16,7 +16,16 @@ import jenkins.Sample.generic.baseutility.BaseClassTest;
 public class GE_CreateContactTest extends BaseClassTest {
 	@Test(groups = "SmokeTest")
 	public void CreateContactTest() throws Throwable {
-
+		String URL = System.getProperty("url");
+	    String BROWSER = System.getProperty("browser");
+	    String USERNAME = System.getProperty("username");
+	    String PASSWORD = System.getProperty("password");
+	    
+	    System.out.println(URL);
+	    System.out.println(BROWSER);
+	    System.out.println(USERNAME);
+	    System.out.println(PASSWORD);
+	    
 		// fetch TSD from excel file
 		String LastName = elib.getDataFromExcel("Org", 1, 7) + jlib.getRandomNumber();
 		// naviagte to contacts page
