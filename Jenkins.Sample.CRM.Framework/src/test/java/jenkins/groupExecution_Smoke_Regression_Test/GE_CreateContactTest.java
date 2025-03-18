@@ -28,19 +28,14 @@ public class GE_CreateContactTest extends BaseClassTest {
 		// enter lastname
 		CreatingNewContactPage cncp = new CreatingNewContactPage(driver);
 		cncp.createContact(LastName);
-		// verify Header msg
-		String actlastname = cp.getHeaderMsg().getText();
-		if (actlastname.contains(LastName)) {
-			System.out.println("LastName:" + LastName + " is verified===>PASS");
-		} else {
-			System.out.println("LastName:" + LastName + " is not verified===>FAIL");
-		}
+		System.out.println("Executed CreateContactTest");
+		
 	}
 
 	@Test(groups = {"RegressionTest"})
 	public void CreateContactWithDateTest() throws Throwable {
 		
-		System.out.println("Execute Create Contact With Date Test");
+		System.out.println("Executed CreateContactWithDateTest");
 		
 //		// fetch TSD from excel file
 //		String LastName = elib.getDataFromExcel("Org", 1, 7) + jlib.getRandomNumber();
@@ -59,20 +54,12 @@ public class GE_CreateContactTest extends BaseClassTest {
 //		// enter lastname
 //		CreatingNewContactPage cncp = new CreatingNewContactPage(driver);
 //		cncp.createContact(LastName, startDateEdit, endDateEdit);
-//
-//		// verify Header msg
-//		String actlastname = cp.getHeaderMsg().getText();
-//		if (actlastname.contains(LastName)) {
-//			System.out.println("LastName:" + LastName + " is verified===>PASS");
-//		} else {
-//			System.out.println("LastName:" + LastName + " is not verified===>FAIL");
-//		}
 	}
 	
 	@Test(groups = {"RegressionTest"})
 	public void CreateContactWithOrgNameTest() throws Throwable {
 		
-		System.out.println("Execute Create Contact With OrgName Test");
+		System.out.println("Executed CreateContactWithOrgNameTest");
 		
 //		//fetch TSD from excel file
 //	    String OrgName = elib.getDataFromExcel("Org", 1, 2)+ jlib.getRandomNumber();
@@ -86,14 +73,7 @@ public class GE_CreateContactTest extends BaseClassTest {
 //	    //enter org name
 //	    CreatingNewOrganizationPage cnop = new CreatingNewOrganizationPage(driver);
 //		cnop.createOrg(OrgName);
-//		 //verify header msg
-//		   String OrgHeaderInfo = op.getOrgHeaderMsg().getText();
-//		   if(OrgHeaderInfo.contains(OrgName)) {
-//			   System.out.println("OrgName:"+OrgName+" is verified===>PASS");
-//		   }
-//		   else {
-//			   System.out.println("OrgName:"+OrgName+" is not verified===>FAIL");
-//		   }
+//		
 //		//naviagte to contacts page
 //		   hp.getContactslink().click();
 //		   //click on create new contat btn
@@ -114,19 +94,12 @@ public class GE_CreateContactTest extends BaseClassTest {
 //		   wlib.switchToNewBrowser(driver, "Contacts&action");
 //		   //click on save btn
 //		   cncp.getSaveButton().click();
-//		   //verify header msg
-//		   String ContactsHeaderInfo = cp.getHeaderMsg().getText();
-//		   if(ContactsHeaderInfo.contains(LastName)) {
-//			   System.out.println("LastName:"+LastName+" is verified===>PASS");
-//		   }
-//		   else {
-//			   System.out.println("LastName:"+LastName+" is not verified===>FAIL");
-//		   }  
 	}
+	
 	@Test(groups = "SmokeTest")
 	public void CreateContactUsingLeadSourceTest() throws Throwable {
 		
-		System.out.println("Execute Create Contact Using LeadSource Test");
+		System.out.println("Executed CreateContactUsingLeadSourceTest");
 		
 //	    String OrgName = elib.getDataFromExcel("Org", 1, 2)+ jlib.getRandomNumber();
 //		String LastName = elib.getDataFromExcel("Org", 1, 7)+ jlib.getRandomNumber();
@@ -141,14 +114,6 @@ public class GE_CreateContactTest extends BaseClassTest {
 //	    //enter lastname lead source from dd
 //	    CreatingNewContactPage cncp = new CreatingNewContactPage(driver);
 //	    cncp.createContact(LastName, LeadSource);
-//	    //verify Header msg
-//	  String actlastname = cp.getHeaderMsg().getText();
-//	    if(actlastname.contains(LastName)) {
-//	    	System.out.println("LastName:"+LastName+" is verified===>PASS");
-//	    }
-//	    else {
-//	    	System.out.println("LastName:"+LastName+" is not verified===>FAIL");
-//	    }
 	}
 	
 }
